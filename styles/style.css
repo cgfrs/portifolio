@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root { /*vARIÁVEIS DE COR*/
+    --cor-primaria: #000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22d4fd;
+    --cor-houver: #272727;
+
+    --font-primaria: 'Krona One', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+
+}
+
+
+*{
+    margin: 0; /* USAR SEMPRE*/
+    padding: 0; /* USAR SEMPRE*/
+}
+body{
+   /* height: 100vh; /* Vai deixar usar 100% da tela*/
+    box-sizing: border-box;/* Vai evitar que estoure o tamanho da tela */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria)
+    
+    
+}
+.cabecalho {
+    padding: 2% 0 0 15%;
+    
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--font-secundaria);
+    font-size: 24px;
+    font-weight: 600; 
+    color: var(--cor-terciaria);
+    text-decoration: none; /*Apaga o sublinhado*/
+    
+}
+
+.about__main {
+    padding: 5% 15%;
+   display: flex; /* Vai deixar os elementos alinhados em uma só linha*/
+   align-items: center; /*Serve para alinahr os elementos no centro, referente ao objeto
+   maior*/
+   justify-content: space-between; /*Serve para separar os elementos filhos um para
+   a direita e outro para a esquerda*/  
+}
+
+.secao {
+    /*Foi feita uma section para poder mexer no titulo e paragrafo
+    e não mexer na imagem*/
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* gap serve para determinar o espaçamento entre os elementos filhos.*/
+    font-size: 15px;
+    font-family: var(--font-primaria);
+}
+.apresentacao{
+   padding: 5% 15%;
+   display: flex; /* Vai deixar os elementos alinhados em uma só linha*/
+   align-items: center; /*Serve para alinahr os elementos no centro, referente ao objeto
+   maior*/
+   justify-content: space-between; /*Serve para separar os elementos filhos um para
+   a direita e outro para a esquerda*/
+   gap: 82px;
+}
+.apresentacao__conteudo { /*Foi feita uma section para poder mexer no titulo e paragrafo
+    e não mexer na imagem*/
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* gap serve para determinar o espaçamento entre os elementos filhos.*/
+
+}
+.apresentacao__conteudo__titulo { /*Foi feita essa classe para mexer apenas no titulo*/
+    font-size: 36px;
+    font-family: var(--font-primaria);
+}
+.destaque-titulo{
+    color: var(--cor-terciaria)
+}
+
+.apresentacao__conteudo__texto { /*Foi feita essa classe para mexer apenas no parágreafo*/
+    font-size: 24px;
+    font-family: var(--font-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*Serara os elementos filhos*/
+    align-items: center; /*Serve para alinahr os elementos no centro, referente ao objeto
+    maior*/
+    gap: 32px; /* vai espaçar os elementos filhos*/
+}
+
+.apresentacao__link__subtitulo {
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.apresentacao__links__link { /*BOTÕES DOS LINKS*/
+   /* background-color: #22d4fd;*/  
+    display: flex;
+    justify-content: center; /*Alinha os elementos filhos no centro*/
+    gap: 16px;
+    width: 378px;
+    border: 2px solid var(--cor-terciaria); /*Faz um contorno em volta do elemento*/
+    text-align: center; /* Deixa o texto no centro*/
+    border-radius: 8px; /*Arredonda as bordas*/
+    font-size: 24px;
+    font-weight: 600; /*Aumenta o peso da fonte*/
+    padding: 21.5px 0; /* distancia do texto até a margem - Primeiro valor é o distanciamento vertical e 
+    o segundo é na horizontal*/
+    text-decoration: none; /* Tira o sublinhado do Link*/
+    color: var(--cor-secundaria); /* Muda a cor do texto*/
+    font-family: var(--font-secundaria);  
+}
+.apresentacao__links__link:hover { /*Animação quando o mouse passa por cima*/
+    background-color: var(--cor-houver);
+    color: var(--cor-terciaria);
+}
+.rodape {
+    padding: 24px;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 24px;
+    font-weight: 400;
+}
+@media (max-width: 1200px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+    
+}
+
+
+
